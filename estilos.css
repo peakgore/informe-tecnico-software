@@ -1,0 +1,297 @@
+
+/* CONFIGURACIÓN GENERAL */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+/* ENCABEZADO */
+
+header {
+    background-color: #1f4e79;
+    color: white;
+    padding: 20px 0;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 26px;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* SECCIÓN DE INICIO */
+
+.inicio {
+    min-height: 500px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background-color: #dceeff;
+}
+
+.contenido-inicio {
+    width: 90%;
+    max-width: 750px;
+}
+
+.contenido-inicio h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #1f4e79;
+}
+
+.contenido-inicio p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+
+/* BOTONES */
+
+.boton,
+button {
+    background-color: #1f4e79;
+    color: white;
+
+    padding: 12px 25px;
+
+    border: none;
+    border-radius: 6px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    text-decoration: none;
+}
+
+.boton:hover,
+button:hover {
+    background-color: #163a5c;
+}
+
+
+/* SECCIONES */
+
+.seccion {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 70px 0;
+}
+
+.seccion h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #1f4e79;
+}
+
+
+/* SERVICIOS */
+
+.servicios {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.tarjeta {
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta h3 {
+    color: #1f4e79;
+    margin-bottom: 15px;
+}
+
+
+/* FORMULARIO */
+
+.formulario-seccion {
+    max-width: 700px;
+}
+
+form {
+    background-color: white;
+
+    padding: 35px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+
+    margin-top: 15px;
+    margin-bottom: 5px;
+
+    font-weight: bold;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 5px;
+
+    font-size: 15px;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+    outline: none;
+
+    border-color: #1f4e79;
+}
+
+form button {
+    width: 100%;
+
+    margin-top: 25px;
+}
+
+
+/* MENSAJE */
+
+.mensaje {
+    margin-top: 20px;
+
+    padding: 15px;
+
+    border-radius: 6px;
+
+    text-align: center;
+
+    font-weight: bold;
+
+    display: none;
+}
+
+.mensaje.exito {
+    display: block;
+
+    background-color: #d4edda;
+
+    color: #155724;
+}
+
+.mensaje.error {
+    display: block;
+
+    background-color: #f8d7da;
+
+    color: #721c24;
+}
+
+
+/* CONTACTO */
+
+.contacto {
+    background-color: #1f4e79;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 50px;
+}
+
+.contacto h2 {
+    margin-bottom: 20px;
+}
+
+
+/* PIE DE PÁGINA */
+
+footer {
+    background-color: #142f46;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+}
+
+
+/* ADAPTACIÓN PARA CELULARES */
+
+@media (max-width: 768px) {
+
+    .contenedor {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .contenido-inicio h2 {
+        font-size: 30px;
+    }
+
+    .servicios {
+        grid-template-columns: 1fr;
+    }
+
+}
